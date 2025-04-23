@@ -1,0 +1,19 @@
+/* estilos.css */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .galeria-basica {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .galeria-basica img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
