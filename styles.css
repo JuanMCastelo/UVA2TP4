@@ -51,7 +51,7 @@ body {
 }
 
 .tarjeta1 {
-        max-width: 1200px; /* antes podía ser más chico */
+        max-width: 200px; /* antes podía ser más chico */
         margin: 0 auto;     /* centrado */
         padding: 2rem;      /* espacio interior */
 }
