@@ -28,17 +28,18 @@ body {
     padding: 20px 0;
   }
   
-  .tarjeta {
-    background-color: #fff;
-    border-radius: 10px;
+.tarjeta {
+    background-color: #f9f9f9; /* Cambiado a un gris claro */
+    border-radius: 15px; /* Incrementado el redondeo */
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .tarjeta:hover {
-    transform: translateY(-5px);
-  }
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Incrementada la sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadida transición para la sombra */
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px); /* Incrementado el desplazamiento */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Incrementada la sombra al pasar el mouse */
+}
   
 .tarjeta img {
     width: 100%;
