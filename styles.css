@@ -2,8 +2,8 @@ body {
     font-family: Arial, sans-serif;
     padding: 20px;
   }
-
-.galeria {
+  
+  .galeria {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas */
     gap: 15px;
@@ -11,17 +11,18 @@ body {
     margin: 20px auto;
   }
   
-.imglvl1 {
+  .imglvl1 {
     width: 250px; /* fuerza el mismo ancho */
     height: 250px; /* fuerza el mismo alto */
     object-fit: cover; /* recorta sin deformar */
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   }
-/* ============================= */
-/*       NIVEL AVANZADO          */
-/* ============================= */
-.nivel-avanzado {
+  
+  /* ============================= */
+  /*       NIVEL AVANZADO          */
+  /* ============================= */
+  .nivel-avanzado {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 200px);
@@ -74,14 +75,8 @@ body {
     position: relative;
   }
   
-  .nivel-avanzado img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  /* --- Overlay de contenido encima de la imagen --- */
-.overlay {
+  /* El overlay ahora siempre será visible */
+  .overlay {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -89,7 +84,7 @@ body {
     padding: 10px;
     background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
     color: white;
-    display: flex;
+    display: flex; /* Ahora siempre está visible */
     flex-direction: column;
     gap: 5px;
   }
@@ -115,7 +110,7 @@ body {
     margin: 0;
     color: #ddd;
   }
-
+  
   /* Responsive */
   @media (max-width: 768px) {
     .nivel-avanzado {
@@ -129,5 +124,4 @@ body {
       height: 200px;
     }
   }
-  
   
