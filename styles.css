@@ -23,71 +23,58 @@ body {
 /* ============================= */
 .nivel-avanzado {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 160px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    grid-template-areas:
-      "area1 area1 area2 area3"
-      "area4 area5 area5 area6";
-    margin: 40px auto;
-    max-width: 1200px;
+    padding: 20px 0;
   }
   
-  /* Asignamos cada tarjeta a su área */
-  .area1 { grid-area: area1; }
-  .area2 { grid-area: area2; }
-  .area3 { grid-area: area3; }
-  .area4 { grid-area: area4; }
-  .area5 { grid-area: area5; }
-  .area6 { grid-area: area6; }
-  
   .tarjeta {
-    position: relative;
-    overflow: hidden;
+    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .tarjeta:hover {
+    transform: translateY(-5px);
   }
   
   .tarjeta img {
     width: 100%;
-    height: 100%;
+    height: 150px;
     object-fit: cover;
   }
   
-  /* Etiqueta superior */
   .etiqueta {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #1976d2;
-    color: #fff;
+    background-color: #1e40af;
+    color: white;
     font-size: 12px;
     padding: 4px 8px;
+    top: 10px;
+    left: 10px;
     border-radius: 4px;
+    z-index: 1;
   }
   
-  .etiqueta.celeste { background-color: #00bcd4; }
-  .etiqueta.azul    { background-color: #0047ff; }
-  
-  /* Pie de tarjeta */
   .info {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(255,255,255,0.9);
-    padding: 12px;
+    padding: 10px 15px;
   }
   
   .info h3 {
     margin: 0;
     font-size: 16px;
-    color: #333;
   }
   
   .info p {
-    margin: 4px 0 0;
-    font-size: 13px;
-    color: #555;
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .tarjeta {
+    position: relative;
   }
   
   /* Responsive: en pantallas < 768px, pasamos a 2 columnas */
