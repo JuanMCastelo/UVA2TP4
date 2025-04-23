@@ -11,7 +11,7 @@ body {
     margin: 20px auto;
   }
   
-  .galeria img {
+.imglvl1 {
     width: 250px; /* fuerza el mismo ancho */
     height: 250px; /* fuerza el mismo alto */
     object-fit: cover; /* recorta sin deformar */
