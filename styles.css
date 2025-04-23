@@ -54,6 +54,8 @@ body {
         max-width: 200px; /* antes podía ser más chico */
         margin: 0 auto;     /* centrado */
         padding: 2rem;      /* espacio interior */
+        object-fit: cover;
+        border-radius: 10px; /* bordes redondeados */
 }
 
 .tarjeta img:nth-child(2) {
