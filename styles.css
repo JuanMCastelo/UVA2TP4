@@ -62,7 +62,7 @@ body {
   
   /* Tarjeta6 ocupa columna 2 y 3 en la fila 3 */
   .tarjeta6 {
-    grid-column: 2 / span 2;
+    grid-column: 2 / span 3;
     grid-row: 3;
   }
   
@@ -80,7 +80,7 @@ body {
     display: block;
   }
   
-  /* 🌐 Responsive */
+  /* Responsive */
   @media (max-width: 768px) {
     .nivel-avanzado {
       grid-template-columns: 1fr;
