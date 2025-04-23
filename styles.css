@@ -42,10 +42,10 @@ body {
   
 .tarjeta img {
     width: 100%;
-    height: auto; /* Permite que las imágenes mantengan su proporción original */
-    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin recortarse */
+    height: 200px; /* Altura fija para mantener consistencia */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarse */
+    border-radius: 10px 10px 0 0; /* Redondea solo las esquinas superiores */
 }
-  
   .etiqueta {
     position: absolute;
     background-color: #1e40af;
