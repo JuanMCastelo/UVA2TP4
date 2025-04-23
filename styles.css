@@ -5,18 +5,18 @@ body {
   
   .galeria {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     max-width: 900px;
     margin: 20px auto;
   }
   
   .imglvl1 {
-    width: 250px; /* fuerza el mismo ancho */
-    height: 250px; /* fuerza el mismo alto */
-    object-fit: cover; /* recorta sin deformar */
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   }
   
   /* ============================= */
@@ -32,61 +32,39 @@ body {
     margin: auto;
   }
   
-  /* Tarjeta1 ocupa 2 columnas en la primera fila */
-  .tarjeta1 {
-    grid-column: 1 / span 2;
-    grid-row: 1;
-  }
-  
-  /* Tarjetas 2 y 3 verticales en la 3ª columna */
-  .tarjeta2 {
-    grid-column: 3;
-    grid-row: 1;
-  }
-  
-  .tarjeta3 {
-    grid-column: 3;
-    grid-row: 2;
-  }
-  
-  /* Tarjeta4 ocupa toda la primera columna, filas 2 y 3 */
-  .tarjeta4 {
-    grid-column: 1;
-    grid-row: 2 / span 2;
-  }
-  
-  /* Tarjeta5 en columna 2, fila 2 */
-  .tarjeta5 {
-    grid-column: 2;
-    grid-row: 2;
-  }
-  
-  /* Tarjeta6 ocupa columna 2 y 3 en la fila 3 */
-  .tarjeta6 {
-    grid-column: 2 / span 3;
-    grid-row: 3;
-  }
-  
-  /* Estilos base */
   .nivel-avanzado > div {
-    background-color: #f0f0f0;
+    position: relative;
+    height: 100%;
     overflow: hidden;
     border-radius: 8px;
-    position: relative;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
-  /* El overlay ahora siempre será visible */
+  /* Imagenes dentro de las tarjetas */
+  .nivel-avanzado img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Overlay siempre visible en la parte inferior */
   .overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 10px;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
     color: white;
-    display: flex; /* Ahora siempre está visible */
+    display: flex;
     flex-direction: column;
     gap: 5px;
+    box-sizing: border-box;
+    pointer-events: none;
   }
   
   /* Etiqueta tipo "Historia" */
@@ -123,5 +101,36 @@ body {
       grid-row: auto !important;
       height: 200px;
     }
+  }
+  
+  /* Distribución especial de tarjetas */
+  .tarjeta1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+  
+  .tarjeta2 {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  
+  .tarjeta3 {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  
+  .tarjeta4 {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+  }
+  
+  .tarjeta5 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  
+  .tarjeta6 {
+    grid-column: 2 / span 3;
+    grid-row: 3;
   }
   
