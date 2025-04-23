@@ -50,8 +50,10 @@ body {
     border-bottom: 4px solid #1e3a8a;
 }
 
-.tarjeta img:nth-child(1) {
-    height: 300px; /* Imagen grande */
+.tarjeta1 {
+        max-width: 1200px; /* antes podía ser más chico */
+        margin: 0 auto;     /* centrado */
+        padding: 2rem;      /* espacio interior */
 }
 
 .tarjeta img:nth-child(2) {
