@@ -21,100 +21,72 @@ body {
 /* ============================= */
 /*       NIVEL AVANZADO          */
 /* ============================= */
-/* Comentado porque no se va a utilizar este estilo para la sección de nivel avanzado */
-/*
 .nivel-avanzado {
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
-    gap: 20px; 
-    padding: 20px; 
-}
-*/
-
-.tarjeta {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease;
-}
-
-.tarjeta:hover {
-    transform: translateY(-5px);
-}
-
-.tarjeta img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    gap: 10px;
     width: 100%;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* Tarjeta1 ocupa 2 columnas en la primera fila */
+  .tarjeta1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+  
+  /* Tarjetas 2 y 3 ocupan la 3ra columna dividida en dos filas */
+  .tarjeta2 {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  
+  .tarjeta3 {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  
+  /* Tarjeta4 ocupa toda la columna izquierda (3 filas) */
+  .tarjeta4 {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+  }
+  
+  /* Tarjetas 5, 6 y 7 llenan el resto del grid */
+  .tarjeta5 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  
+  .tarjeta6 {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  
+  .tarjeta7 {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  
+  /* Estilo base para tarjetas */
+  .nivel-avanzado > div {
+    background-color: #f0f0f0;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nivel-avanzado img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-bottom: 4px solid #1e3a8a;
-}
-
-.tarjeta1 {
-        max-width: 200px; /* antes podía ser más chico */
-        margin: 0 auto;     /* centrado */
-        padding: 2rem;      /* espacio interior */
-        object-fit: cover;
-        border-radius: 10px; /* bordes redondeados */
-}
-
-.tarjeta img:nth-child(2) {
-    height: 200px; /* Imagen mediana */
-}
-
-.tarjeta img:nth-child(3) {
-    height: 150px; /* Imagen pequeña */
-}
-
-.tarjeta img:nth-child(4) {
-    height: 250px; /* Imagen mediana */
-}
-
-.tarjeta img:nth-child(5) {
-    height: 180px; /* Imagen pequeña */
-}
-
-.tarjeta img:nth-child(6) {
-    height: 220px; /* Imagen mediana */
-}
-
-.etiqueta {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #1e3a8a;
-    color: white;
-    padding: 5px 10px;
-    font-size: 12px;
-    border-radius: 5px;
-    z-index: 1;
-}
-
-.info {
-    padding: 10px 15px;
-}
-
-.info h3 {
-    font-size: 16px;
-    margin: 0;
-}
-
-.info p {
-    font-size: 14px;
-    color: #666;
-    margin: 5px 0 0;
-}
-
-/* Responsive: en pantallas < 768px, pasamos a 2 columnas */
-@media (max-width: 768px) {
-    .nivel-avanzado {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Responsive: en pantallas < 480px, 1 columna */
-@media (max-width: 480px) {
-    .nivel-avanzado {
-        grid-template-columns: 1fr;
-    }
-}
+  }
+  
+  .info {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
