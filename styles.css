@@ -40,11 +40,11 @@ body {
     transform: translateY(-5px);
   }
   
-  .tarjeta img {
+.tarjeta img {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
+    height: auto; /* Permite que las imágenes mantengan su proporción original */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin recortarse */
+}
   
   .etiqueta {
     position: absolute;
